@@ -13,4 +13,18 @@ model Category {
   value      String
   created_At DateTime @default(now())
   updated_At DateTime @updatedAt
+
+  products Product[]
+}
+
+model Product {
+  id         String    @id @default(auto()) @map("_id") @db.ObjectId
+  category   String
+  name       String
+  image      String
+  price      Int
+  created_At DateTime  @default(now())
+  updated_At DateTime  @updatedAt
+  Category   Category? @relation(fields: [categoryId], references: [id])
+  categoryId String?   @db.ObjectId
 }

@@ -6,3 +6,8 @@ export const listCategories = async () => {
 
 };
 
+
+export const defaultCategories = async () => {
+
+  return await prisma.category.findFirst();
+};

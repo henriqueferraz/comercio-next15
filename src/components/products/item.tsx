@@ -1,6 +1,6 @@
 "use client"
 
-import { Product } from "@/types/product"
+import { Product } from "@prisma/client";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { ToastAction } from "@/components/ui/toast";
